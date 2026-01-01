@@ -1,6 +1,6 @@
 [project]
 name = "bodhiq"
-version = "0.1.0"
+version = "0.1.1"
 description = "Personal memory search CLI inspired by Bodha"
 readme = "README.md"
 requires-python = ">=3.13"

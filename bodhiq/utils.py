@@ -35,7 +35,7 @@ def wait_task(task, wait=True):
     return task_info
 
 
-def generate_id(text, tags):
+def generate_id(text: str, tags: list[str]):
     """
     Generate SHA-256 hash for a memory based on text + tags.
     Ensures idempotency.

@@ -25,12 +25,13 @@ def cli(ctx, debug):
 # ---------------- COMMANDS ----------------
 @click.command(name="add")
 @click.argument("text")
-@click.option("--tag", multiple=True, help="Add tags")
+@click.option("--tags", help="Comma-separated tags")
 @click.option(
     "--wait/--no-wait", default=True, help="Wait for Meilisearch task to complete"
 )
-def add_cmd(text, tag, wait):
-    remember_memory(text, tag, wait)
+def add_cmd(text: str, tags: str, wait):
+    tags_list = [tag.strip() for tag in tags.split(",")] if tags else []
+    remember_memory(text, tags_list, wait)
 
 
 @click.command(name="q")
