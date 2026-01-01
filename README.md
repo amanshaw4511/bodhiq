@@ -1,7 +1,7 @@
 # Bodhiq
 
 **Bodhiq** is a personal memory and search CLI tool that helps you **store, search, and manage your thoughts, notes, and memories**.  
-Inspired by the Sanskrit word *Bodha* (knowledge, awareness), Bodhiq combines **fast search, TF-IDF semantic matching**, and **tags** to make finding your memories easy and intelligent.
+  Bodhiq combines **fast search, TF-IDF semantic matching**, and **tags** to make finding your memories easy and intelligent.
 
 ---
 
