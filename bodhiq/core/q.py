@@ -30,12 +30,15 @@ def query_memory(query, tags=None, use_tfidf=False):
         query_vec = vectorizer.transform([query])
         sims = cosine_similarity(query_vec, X).flatten()
 
-        # Find best match
-        best_idx = sims.argmax()
-        best_doc = docs[best_idx]
-        click.echo(
-            f"💡 Best match (TF-IDF): {best_doc['text']} [ID={best_doc['id'][:12]}]"
-        )
+        top_n = min(5, len(docs))
+        top_indices = sims.argsort()[::-1][:top_n]
+
+        click.echo(f"💡 Top {top_n} matches (TF-IDF):")
+        for rank, idx in enumerate(top_indices, start=1):
+            doc = docs[idx]
+            click.echo(
+                f"{rank}. {doc['text']} [ID={doc['id'][:12]}] (score={sims[idx]:.4f})"
+            )
 
     else:
         # Normal Meilisearch token search
