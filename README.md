@@ -128,5 +128,5 @@ The name **Bodhiq** comes from *Bodha* (knowledge/awareness) + IQ, representing 
 
 ---
 
-**Enjoy using Bodhiq — your personal memory companion!**
+**Enjoy using Bodhiq, your personal memory companion!**
 
